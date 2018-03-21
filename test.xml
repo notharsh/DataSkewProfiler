@@ -1,0 +1,103 @@
+<W_LOCAL buildVersion="internal_5.3.0-closedown0"
+         cloneable="1"
+         codeVersion="157"
+         eclVersion="5.3.0"
+         hash="2344844820"
+         state="completed"
+         xmlns:xsi="http://www.w3.org/1999/XMLSchema-instance">
+ <Debug>
+  <addtimingtoworkunit>0</addtimingtoworkunit>
+  <debugnlp>1</debugnlp>
+  <expandpersistinputdependencies>1</expandpersistinputdependencies>
+  <forcegenerate>1</forcegenerate>
+  <noterecordsizeingraph>1</noterecordsizeingraph>
+  <regressiontest>1</regressiontest>
+  <showmetaingraph>1</showmetaingraph>
+  <showrecordcountingraph>1</showrecordcountingraph>
+  <spanmultiplecpp>0</spanmultiplecpp>
+  <targetclustertype>hthor</targetclustertype>
+ </Debug>
+ <Graphs>
+  <Graph name="graph1" type="activities">
+   <xgmml>
+    <graph wfid="2">
+     <node id="1">
+      <att>
+       <graph>
+        <att name="rootGraph" value="1"/>
+        <edge id="2_0" source="2" target="3"/>
+        <node id="2" label="Index Read&#10;&apos;names&apos;">
+         <att name="definition" value="workuniteg1.ecl(3,1)"/>
+         <att name="name" value="results"/>
+         <att name="_kind" value="77"/>
+         <att name="ecl" value="INDEX({ string40 name, string80 address }, &apos;names&apos;, fileposition(false));&#10;FILTER(KEYED(name = STORED(&apos;searchname&apos;)));&#10;"/>
+         <att name="recordSize" value="120"/>
+         <att name="predictedCount" value="0..?[disk]"/>
+         <att name="_fileName" value="names"/>
+        </node>
+        <node id="3" label="Output&#10;Result #1">
+         <att name="definition" value="workuniteg1.ecl(4,1)"/>
+         <att name="_kind" value="16"/>
+         <att name="ecl" value="OUTPUT(..., workunit);&#10;"/>
+         <att name="recordSize" value="120"/>
+        </node>
+       </graph>
+      </att>
+     </node>
+    </graph>
+   </xgmml>
+  </Graph>
+ </Graphs>
+ <Query fetchEntire="1">
+  <Associated>
+   <File desc="workuniteg1.ecl.cpp"
+         filename="c:\regressout\workuniteg1.ecl.cpp"
+         ip="10.121.159.73"
+         type="cpp"/>
+  </Associated>
+ </Query>
+ <Results>
+  <Result isScalar="0"
+          name="Result 1"
+          recordSizeEntry="mf1"
+          rowLimit="-1"
+          sequence="0">
+   <SchemaRaw xsi:type="SOAP-ENC:base64">
+    name&#xe000;&#xe004;(&#xe000;&#xe000;&#xe000;&#xe001;ascii&#xe000;&#xe001;ascii&#xe000;address&#xe000;&#xe004;P&#xe000;&#xe000;&#xe000;&#xe001;ascii&#xe000;&#xe001;ascii&#xe000;&#xe000;&#xe018;%&#xe000;&#xe000;&#xe000;{ string40 name, string80 address };&#10;   </SchemaRaw>
+  </Result>
+  <Result name="Result 2" sequence="1">
+   <SchemaRaw xsi:type="SOAP-ENC:base64">
+    Result_2&#xe000;&#xe004;&#241;&#255;&#255;&#255;&#xe001;ascii&#xe000;&#xe001;ascii&#xe000;&#xe000;&#xe018;&#xe000;&#xe000;&#xe000;&#xe000;   </SchemaRaw>
+  </Result>
+ </Results>
+ <Statistics>
+  <Statistic c="eclcc"
+             count="1"
+             creator="eclcc"
+             kind="SizePeakMemory"
+             s="compile"
+             scope="compile"
+             ts="1428933081084000"
+             unit="sz"
+             value="27885568"/>
+ </Statistics>
+ <Variables>
+  <Variable name="searchname">
+   <SchemaRaw xsi:type="SOAP-ENC:base64">
+    searchname&#xe000;&#xe004;&#241;&#255;&#255;&#255;&#xe001;ascii&#xe000;&#xe001;ascii&#xe000;&#xe000;&#xe018;&#xe000;&#xe000;&#xe000;&#xe000;   </SchemaRaw>
+  </Variable>
+ </Variables>
+ <Workflow>
+  <Item mode="normal"
+        state="null"
+        type="normal"
+        wfid="1"/>
+  <Item mode="normal"
+        state="reqd"
+        type="normal"
+        wfid="2">
+   <Dependency wfid="1"/>
+   <Schedule/>
+  </Item>
+ </Workflow>
+</W_LOCAL>
