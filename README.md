@@ -49,8 +49,3 @@ Takes the frequency of each of the 7 types of queries in a workunit as input, an
 The model also ouputs the relative importance of features within the random forest. By redistributing the data around the type of query with the maximum impact of skew, the amount of time taken to execute the job decreases. The process is repeated for different initial distributions of data, with varying initial skews and the time taken for each workunit is documented.
 
 Care has to be taken that the amount of time taken to redistribute the data does not outweigh the benefit. If too much redistribution is done the performance may end up being worse than that of skewed data.
-
-
-#Interpretability
-
-Will add this if necessary, basically explaining the implications and inferences of the result. 
